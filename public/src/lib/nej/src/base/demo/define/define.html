@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>define demo</title>
+    <meta charset="utf-8" />
+    <script>
+      function log(m){
+          var p = document.createElement('p');
+          p.innerHTML = m;
+          document.body.appendChild(p);
+      }
+    </script>
+  </head>
+  <body>
+    
+    <script src="../../../define.js?pro=/src/&abc=/base/demo/"></script>
+    <script>
+      define([
+          'json!abc/define/a'
+      ],function(json){
+          log('a:'+json.a);
+      });
+    </script>
+  </body>
+</html>

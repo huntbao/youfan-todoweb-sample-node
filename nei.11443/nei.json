@@ -1,0 +1,18 @@
+{
+    "updateTime": 1468546221015,
+    "projectName": "node_project",
+    "outputRoot": "./",
+    "npm": false,
+    "engine": "ejs",
+    "mcss": true,
+    "overwrite": false,
+    "projectType": "hz.netease",
+    "action": "build",
+    "project": "./",
+    "template": "node",
+    "bower": false,
+    "config": "",
+    "id": "11443",
+    "webRoot": "/Users/huntbao/youfan-todoweb-sample-node/public/",
+    "viewRoot": "/Users/huntbao/youfan-todoweb-sample-node/view/"
+}

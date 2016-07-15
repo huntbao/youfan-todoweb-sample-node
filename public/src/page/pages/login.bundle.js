@@ -1,0 +1,1 @@
+webpackJsonp([2],{0:function(e,t,n){"use strict";n(532),function(){var e=document.getElementById("login-name"),t=document.getElementById("form");t.addEventListener("submit",function(t){""===e.value.trim()&&(alert("请输入用户名"),e.focus(),t.preventDefault())})}()},532:function(e,t){}});

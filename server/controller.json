@@ -1,0 +1,20 @@
+{
+  "rootPath": "/server/controller",
+  "controllers": [
+    {
+      "path": "/index",
+      "handler": "page.index"
+    },
+    
+    {
+      "path": "/login",
+      "handler": "page.login"
+    },
+    
+    {
+      "path": "/page/detail/:todoId",
+      "handler": "page.pageDetail:todoId"
+    }
+    
+  ]
+}

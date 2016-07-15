@@ -1,0 +1,637 @@
+{
+	"pages": [
+		{
+			"id": 11076,
+			"path": "/index",
+			"name": "首页",
+			"templates": [
+				11032
+			],
+			"interfaces": [],
+			"description": "Todo web app 首页",
+			"parameters": [],
+			"updateTime": 1459842087000
+		},
+		{
+			"id": 11075,
+			"path": "/login",
+			"name": "登录页面",
+			"templates": [
+				11031
+			],
+			"interfaces": [],
+			"description": "Todo web app 登录页面",
+			"parameters": [],
+			"updateTime": 1459850360000
+		},
+		{
+			"id": 11179,
+			"path": "/page/detail/:todoId",
+			"name": "Todo 详情页",
+			"templates": [
+				11141
+			],
+			"interfaces": [],
+			"description": "",
+			"parameters": [],
+			"updateTime": 1461671641000
+		}
+	],
+	"interfaces": [
+		{
+			"id": 15759,
+			"name": "获取todo列表",
+			"className": "",
+			"description": "",
+			"path": "/api/todos",
+			"method": 1,
+			"isRest": 1,
+			"inputs": [],
+			"outputs": [
+				{
+					"id": 23810,
+					"datatypeId": 12376,
+					"datatypeName": "ResultData",
+					"projectId": 11442,
+					"name": "code",
+					"originalType": 10002,
+					"type": 10002,
+					"typeName": "Number",
+					"isSysType": 1,
+					"isArray": 0,
+					"description": "请求返回状态码",
+					"createTime": 1459842432000,
+					"updateTime": 1459842432000,
+					"defaultValue": ""
+				},
+				{
+					"id": 23811,
+					"datatypeId": 12376,
+					"datatypeName": "ResultData",
+					"projectId": 11442,
+					"name": "message",
+					"originalType": 10001,
+					"type": 10001,
+					"typeName": "String",
+					"isSysType": 1,
+					"isArray": 0,
+					"description": "请求返回消息",
+					"createTime": 1459842432000,
+					"updateTime": 1459842432000,
+					"defaultValue": ""
+				},
+				{
+					"id": 23812,
+					"datatypeId": 12376,
+					"datatypeName": "ResultData",
+					"projectId": 11442,
+					"name": "result",
+					"originalType": 10000,
+					"type": 12377,
+					"typeName": "Todo",
+					"isSysType": 0,
+					"isArray": 1,
+					"description": "请求结果todo列表数据",
+					"createTime": 1459842432000,
+					"updateTime": 1459842432000,
+					"defaultValue": ""
+				}
+			],
+			"headers": [],
+			"updateTime": 1459842683000,
+			"mock": "/Users/huntbao/youfan-todoweb-sample-node/mock.data/interface/get/api/todos/data",
+			"htVersion": 0
+		},
+		{
+			"id": 15760,
+			"name": "添加todo",
+			"className": "",
+			"description": "添加一条 todo",
+			"path": "/api/todos",
+			"method": 0,
+			"isRest": 1,
+			"inputs": [
+				{
+					"id": 36221,
+					"name": "text",
+					"type": 10001,
+					"isPrimite": 0,
+					"typeName": "String",
+					"isSysType": 1,
+					"isArray": 0,
+					"description": "todo内容",
+					"createTime": 1459842675000,
+					"updateTime": 1459842675000,
+					"defaultValue": ""
+				}
+			],
+			"outputs": [
+				{
+					"id": 23810,
+					"datatypeId": 12376,
+					"datatypeName": "ResultData",
+					"projectId": 11442,
+					"name": "code",
+					"originalType": 10002,
+					"type": 10002,
+					"typeName": "Number",
+					"isSysType": 1,
+					"isArray": 0,
+					"description": "请求返回状态码",
+					"createTime": 1459842675000,
+					"updateTime": 1459842675000,
+					"defaultValue": ""
+				},
+				{
+					"id": 23811,
+					"datatypeId": 12376,
+					"datatypeName": "ResultData",
+					"projectId": 11442,
+					"name": "message",
+					"originalType": 10001,
+					"type": 10001,
+					"typeName": "String",
+					"isSysType": 1,
+					"isArray": 0,
+					"description": "请求返回消息",
+					"createTime": 1459842675000,
+					"updateTime": 1459842675000,
+					"defaultValue": ""
+				},
+				{
+					"id": 23812,
+					"datatypeId": 12376,
+					"datatypeName": "ResultData",
+					"projectId": 11442,
+					"name": "result",
+					"originalType": 10000,
+					"type": 12377,
+					"typeName": "Todo",
+					"isSysType": 0,
+					"isArray": 0,
+					"description": "请求结果todo数据",
+					"createTime": 1459842675000,
+					"updateTime": 1459842675000,
+					"defaultValue": ""
+				}
+			],
+			"headers": [],
+			"updateTime": 1459925487000,
+			"mock": "/Users/huntbao/youfan-todoweb-sample-node/mock.data/interface/post/api/todos/data",
+			"htVersion": 0
+		},
+		{
+			"id": 15762,
+			"name": "批量更新todo的完成状态",
+			"className": "",
+			"description": "批量更新todo的完成状态",
+			"path": "/api/todos",
+			"method": 2,
+			"isRest": 1,
+			"inputs": [
+				{
+					"id": 36227,
+					"name": "completed",
+					"type": 10003,
+					"isPrimite": 0,
+					"typeName": "Boolean",
+					"isSysType": 1,
+					"isArray": 0,
+					"description": "是否完成",
+					"createTime": 1459844182000,
+					"updateTime": 1459844182000,
+					"defaultValue": ""
+				},
+				{
+					"id": 36228,
+					"name": "ids",
+					"type": 10001,
+					"isPrimite": 0,
+					"typeName": "String",
+					"isSysType": 1,
+					"isArray": 1,
+					"description": "todo id数组",
+					"createTime": 1459844182000,
+					"updateTime": 1459844182000,
+					"defaultValue": ""
+				}
+			],
+			"outputs": [
+				{
+					"id": 23810,
+					"datatypeId": 12376,
+					"datatypeName": "ResultData",
+					"projectId": 11442,
+					"name": "code",
+					"originalType": 10002,
+					"type": 10002,
+					"typeName": "Number",
+					"isSysType": 1,
+					"isArray": 0,
+					"description": "请求返回状态码",
+					"createTime": 1459844182000,
+					"updateTime": 1459844182000,
+					"defaultValue": ""
+				},
+				{
+					"id": 23811,
+					"datatypeId": 12376,
+					"datatypeName": "ResultData",
+					"projectId": 11442,
+					"name": "message",
+					"originalType": 10001,
+					"type": 10001,
+					"typeName": "String",
+					"isSysType": 1,
+					"isArray": 0,
+					"description": "请求返回消息",
+					"createTime": 1459844182000,
+					"updateTime": 1459844182000,
+					"defaultValue": ""
+				},
+				{
+					"id": 23812,
+					"datatypeId": 12376,
+					"datatypeName": "ResultData",
+					"projectId": 11442,
+					"name": "result",
+					"originalType": 10000,
+					"type": 12377,
+					"typeName": "Todo",
+					"isSysType": 0,
+					"isArray": 1,
+					"description": "更新后的todo列表",
+					"createTime": 1459844182000,
+					"updateTime": 1459844182000,
+					"defaultValue": ""
+				}
+			],
+			"headers": [],
+			"updateTime": 1459844182000,
+			"mock": "/Users/huntbao/youfan-todoweb-sample-node/mock.data/interface/put/api/todos/data",
+			"htVersion": 0
+		},
+		{
+			"id": 15763,
+			"name": "删除单个 todo",
+			"className": "",
+			"description": "删除指定id的todo",
+			"path": "/api/todos/:todoId",
+			"method": 3,
+			"isRest": 1,
+			"inputs": [],
+			"outputs": [
+				{
+					"id": 23810,
+					"datatypeId": 12376,
+					"datatypeName": "ResultData",
+					"projectId": 11442,
+					"name": "code",
+					"originalType": 10002,
+					"type": 10002,
+					"typeName": "Number",
+					"isSysType": 1,
+					"isArray": 0,
+					"description": "请求返回状态码",
+					"createTime": 1459844281000,
+					"updateTime": 1459844281000,
+					"defaultValue": ""
+				},
+				{
+					"id": 23811,
+					"datatypeId": 12376,
+					"datatypeName": "ResultData",
+					"projectId": 11442,
+					"name": "message",
+					"originalType": 10001,
+					"type": 10001,
+					"typeName": "String",
+					"isSysType": 1,
+					"isArray": 0,
+					"description": "请求返回消息",
+					"createTime": 1459844281000,
+					"updateTime": 1459844281000,
+					"defaultValue": ""
+				},
+				{
+					"id": 23812,
+					"datatypeId": 12376,
+					"datatypeName": "ResultData",
+					"projectId": 11442,
+					"name": "result",
+					"originalType": 10000,
+					"type": 12377,
+					"typeName": "Todo",
+					"isSysType": 0,
+					"isArray": 0,
+					"description": "被删除的todo",
+					"createTime": 1459844281000,
+					"updateTime": 1459844281000,
+					"defaultValue": ""
+				}
+			],
+			"headers": [],
+			"updateTime": 1461668895000,
+			"mock": "/Users/huntbao/youfan-todoweb-sample-node/mock.data/interface/delete/api/todos/_/todoId/data",
+			"htVersion": 0
+		},
+		{
+			"id": 15818,
+			"name": "更新单个todo的内容",
+			"className": "",
+			"description": "更新指定id的todo的内容",
+			"path": "/api/todos/:todoId",
+			"method": 2,
+			"isRest": 1,
+			"inputs": [
+				{
+					"id": 36420,
+					"name": "text",
+					"type": 10001,
+					"isPrimite": 0,
+					"typeName": "String",
+					"isSysType": 1,
+					"isArray": 0,
+					"description": "todo内容",
+					"createTime": 1460009143000,
+					"updateTime": 1460009143000,
+					"defaultValue": ""
+				}
+			],
+			"outputs": [
+				{
+					"id": 23810,
+					"datatypeId": 12376,
+					"datatypeName": "ResultData",
+					"projectId": 11442,
+					"name": "code",
+					"originalType": 10002,
+					"type": 10002,
+					"typeName": "Number",
+					"isSysType": 1,
+					"isArray": 0,
+					"description": "请求返回状态码",
+					"createTime": 1460009143000,
+					"updateTime": 1460009143000,
+					"defaultValue": ""
+				},
+				{
+					"id": 23811,
+					"datatypeId": 12376,
+					"datatypeName": "ResultData",
+					"projectId": 11442,
+					"name": "message",
+					"originalType": 10001,
+					"type": 10001,
+					"typeName": "String",
+					"isSysType": 1,
+					"isArray": 0,
+					"description": "请求返回消息",
+					"createTime": 1460009143000,
+					"updateTime": 1460009143000,
+					"defaultValue": ""
+				},
+				{
+					"id": 23812,
+					"datatypeId": 12376,
+					"datatypeName": "ResultData",
+					"projectId": 11442,
+					"name": "result",
+					"originalType": 10000,
+					"type": 12377,
+					"typeName": "Todo",
+					"isSysType": 0,
+					"isArray": 0,
+					"description": "更新后的todo",
+					"createTime": 1460009143000,
+					"updateTime": 1460009143000,
+					"defaultValue": ""
+				}
+			],
+			"headers": [],
+			"updateTime": 1460009143000,
+			"mock": "/Users/huntbao/youfan-todoweb-sample-node/mock.data/interface/put/api/todos/_/todoId/data",
+			"htVersion": 0
+		}
+	],
+	"templates": [
+		{
+			"id": 11141,
+			"path": "/page/detail.ftl",
+			"name": "Todo 详情页",
+			"tag": "",
+			"description": "",
+			"parameters": [
+				{
+					"id": 39312,
+					"name": "todoId",
+					"type": 10001,
+					"isPrimite": 0,
+					"typeName": "String",
+					"isSysType": 1,
+					"isArray": 0,
+					"description": "",
+					"updateTime": 1461671635000,
+					"defaultValue": ""
+				}
+			],
+			"updateTime": 1461671635000,
+			"mock": "page/detail"
+		},
+		{
+			"id": 11032,
+			"path": "/pages/index.ftl",
+			"name": "首页",
+			"tag": "index",
+			"description": "Todo web app 首页",
+			"parameters": [],
+			"updateTime": 1459842085000,
+			"mock": "pages/index"
+		},
+		{
+			"id": 11031,
+			"path": "/pages/login.ftl",
+			"name": "登录页面",
+			"tag": "login",
+			"description": "Todo web app 登录页面",
+			"parameters": [
+				{
+					"id": 36218,
+					"name": "userName",
+					"type": 10001,
+					"isPrimite": 0,
+					"typeName": "String",
+					"isSysType": 1,
+					"isArray": 0,
+					"description": "登录用户名",
+					"updateTime": 1459842019000,
+					"defaultValue": ""
+				}
+			],
+			"updateTime": 1459842019000,
+			"mock": "pages/login"
+		}
+	],
+	"project": {
+		"id": 11443,
+		"name": "Todo Web",
+		"group": "TodoApp"
+	},
+	"timestamp": 1468546221015,
+	"datatypes": {
+		"10000": {
+			"id": 10000,
+			"name": "Variable",
+			"format": 0,
+			"subtype": 0,
+			"updateTime": 1438339452000,
+			"description": "可变类型",
+			"attrs": [],
+			"htVersion": 0
+		},
+		"10001": {
+			"id": 10001,
+			"name": "String",
+			"format": 0,
+			"subtype": 0,
+			"updateTime": 1438339452000,
+			"description": "字符串",
+			"attrs": [],
+			"htVersion": 0
+		},
+		"10002": {
+			"id": 10002,
+			"name": "Number",
+			"format": 0,
+			"subtype": 0,
+			"updateTime": 1438339452000,
+			"description": "数值",
+			"attrs": [],
+			"htVersion": 0
+		},
+		"10003": {
+			"id": 10003,
+			"name": "Boolean",
+			"format": 0,
+			"subtype": 0,
+			"updateTime": 1438339452000,
+			"description": "布尔",
+			"attrs": [],
+			"htVersion": 0
+		},
+		"12376": {
+			"id": 12376,
+			"name": "ResultData",
+			"format": 0,
+			"subtype": 0,
+			"updateTime": 1460623508000,
+			"description": "返回结果统一模型",
+			"attrs": [
+				{
+					"id": 23810,
+					"name": "code",
+					"type": 10002,
+					"isArray": 0,
+					"description": "请求返回状态码",
+					"parentId": 12376,
+					"vkey": "",
+					"defaultValue": ""
+				},
+				{
+					"id": 23811,
+					"name": "message",
+					"type": 10001,
+					"isArray": 0,
+					"description": "请求返回消息",
+					"parentId": 12376,
+					"vkey": "",
+					"defaultValue": ""
+				},
+				{
+					"id": 23812,
+					"name": "result",
+					"type": 10000,
+					"isArray": 0,
+					"description": "请求结果数据，可变",
+					"parentId": 12376,
+					"vkey": "",
+					"defaultValue": ""
+				}
+			],
+			"htVersion": 0
+		},
+		"12377": {
+			"id": 12377,
+			"name": "Todo",
+			"format": 0,
+			"subtype": 0,
+			"updateTime": 1460949156000,
+			"description": "Todo模型",
+			"attrs": [
+				{
+					"id": 23813,
+					"name": "id",
+					"type": 10002,
+					"isArray": 0,
+					"description": "todo id",
+					"parentId": 12377,
+					"vkey": "",
+					"defaultValue": ""
+				},
+				{
+					"id": 23814,
+					"name": "text",
+					"type": 10001,
+					"isArray": 0,
+					"description": "todo 的内容",
+					"parentId": 12377,
+					"vkey": "",
+					"defaultValue": ""
+				},
+				{
+					"id": 23815,
+					"name": "completed",
+					"type": 10003,
+					"isArray": 0,
+					"description": "是否完成",
+					"parentId": 12377,
+					"vkey": "",
+					"defaultValue": "false"
+				}
+			],
+			"htVersion": 0
+		},
+		"12378": {
+			"id": 12378,
+			"name": "User",
+			"format": 0,
+			"subtype": 0,
+			"updateTime": 1459842296000,
+			"description": "用户模型",
+			"attrs": [
+				{
+					"id": 23816,
+					"name": "id",
+					"type": 10002,
+					"isArray": 0,
+					"description": "用户id",
+					"parentId": 12378,
+					"vkey": "",
+					"defaultValue": ""
+				},
+				{
+					"id": 23817,
+					"name": "name",
+					"type": 10001,
+					"isArray": 0,
+					"description": "用户名",
+					"parentId": 12378,
+					"vkey": "",
+					"defaultValue": ""
+				}
+			],
+			"htVersion": 0
+		}
+	},
+	"htVersion": 0
+}
